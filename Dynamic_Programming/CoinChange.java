@@ -14,7 +14,6 @@ public class CoinChange {
             
     */
     public int coinChange(int[] coins, int amount) {
-        int length = coins.length;
         int[] minCount = new int[amount+1];
         Arrays.fill(minCount, amount+1);
         minCount[0] = 0;
