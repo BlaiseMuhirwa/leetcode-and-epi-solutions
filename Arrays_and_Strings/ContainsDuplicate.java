@@ -1,5 +1,6 @@
-package Arrays;
+package Arrays_and_Strings;
 
+import java.util.*;
 public class ContainsDuplicate {
     /* Runtime: O(n); space complexity: O(n) */
     public boolean containsDuplicate(int[] nums) {

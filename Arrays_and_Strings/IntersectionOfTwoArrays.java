@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays_and_Strings;
 import java.util.*;
 
 public class IntersectionOfTwoArrays {

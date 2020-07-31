@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays_and_Strings;
 
 public class RemoveDuplicates {
     public int removeDuplicates(int[] nums) {

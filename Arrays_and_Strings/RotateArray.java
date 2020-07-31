@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays_and_Strings;
 
 public class RotateArray {
     /* The following algorithm runs in O(n) time with O(1) extra space */
