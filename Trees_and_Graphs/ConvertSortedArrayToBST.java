@@ -18,16 +18,16 @@ public class ConvertSortedArrayToBST {
  */
 class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
-        return helper(nums, 0, nums.length-1);
+        return helper(nums, 0, nums.length);
     }
     public TreeNode helper(int[] nums, int start, int end) {
-        if (start > end) return null;
+        if (start >= end) return null;
 
         int midPoint = (start + end) / 2;
 
         TreeNode root = new TreeNode(nums[midPoint]);
-        root.left = helper(nums, start, midPoint - 1);
-        root.right = helper(nums, midPoint + 1, end);
+        root.left = helper(nums, start, midPoint);
+        root.right = helper(nums, midPoint+1, end);
         return root;
     }
     
