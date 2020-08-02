@@ -51,4 +51,21 @@ public class ValidPalindrome {
             return false;
         }
     }
+
+    /* The following is an alternative solution, which is much cleaner 
+    public boolean isPalindrome(String s) {
+        StringBuilder builder = new StringBuilder();
+
+        for (char c : s.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) {
+                builder.append(Character.toLowerCase(c));
+            }
+        }
+        String original = builder.toString();
+        String reversed = builder.reverse().toString();
+
+        return original.equals(reversed);
+
+    }
+    */
 }
