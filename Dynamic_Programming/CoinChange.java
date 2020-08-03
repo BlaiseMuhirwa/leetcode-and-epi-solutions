@@ -22,7 +22,10 @@ public class CoinChange {
             for (int coin : coins) {
                 if (coin <= i) {
                     minCount[i] = Math.min(minCount[i], minCount[i-coin]+1);
-                  
+                    /* here we look for the best way to make amount i: it is the minimum of 
+                    number we had previously by taking some previous coin and the number
+                    we get by picking the current coin + the number of coins of making (i - coin)
+                    amount */
                 }
             }
         }
