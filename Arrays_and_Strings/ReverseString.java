@@ -1,4 +1,4 @@
-package Arrays_and_Strings;
+package arrays_and_strings;
 
 /*
     Write a function that reverses a string. The input string is given as an array of characters char[].

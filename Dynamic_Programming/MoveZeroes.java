@@ -1,4 +1,4 @@
-package Dynamic_Programming;
+package dynamic_programming;
 
 /*
 Given an array nums, write a function to move all 0's to the end of it

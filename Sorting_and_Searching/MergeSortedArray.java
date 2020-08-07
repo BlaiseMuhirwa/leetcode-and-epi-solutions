@@ -1,4 +1,4 @@
-package Sorting_and_Searching;
+package sorting_and_searching;
 
 public class MergeSortedArray {
     

@@ -1,4 +1,4 @@
-package Arrays_and_Strings;
+package arrays_and_strings;
 import java.util.*;
 /*
     Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1.

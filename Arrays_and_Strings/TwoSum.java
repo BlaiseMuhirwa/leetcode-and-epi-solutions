@@ -1,4 +1,4 @@
-package Arrays_and_Strings;
+package arrays_and_strings;
 import java.util.*;
 /*
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.

@@ -1,4 +1,4 @@
-package Trees_and_Graphs;
+package trees_and_graphs;
 import java.util.*;
 /**
  * Definition for a binary tree node.

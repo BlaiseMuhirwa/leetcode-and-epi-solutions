@@ -1,4 +1,4 @@
-package Arrays_and_Strings;
+package arrays_and_strings;
 import java.util.*;
 public class SingleNumber {
     /* the algorithm runs in O(nlogn) time with O(1) extra space 

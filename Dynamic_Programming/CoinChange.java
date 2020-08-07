@@ -1,4 +1,4 @@
-package Dynamic_Programming;
+package dynamic_programming;
 import java.util.*;
 
 public class CoinChange {

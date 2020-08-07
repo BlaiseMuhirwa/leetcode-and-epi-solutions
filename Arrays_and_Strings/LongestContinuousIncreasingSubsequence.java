@@ -1,4 +1,4 @@
-package Arrays_and_Strings;
+package arrays_and_strings;
 
 /* 
     Given an unsorted array of integers, find the length of longest continuous

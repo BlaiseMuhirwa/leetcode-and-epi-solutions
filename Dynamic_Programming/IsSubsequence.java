@@ -1,4 +1,4 @@
-package Dynamic_Programming;
+package dynamic_programming;
 
 /*
 Given a string s and a string t, check if s is subsequence of t.

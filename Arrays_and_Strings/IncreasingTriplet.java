@@ -1,4 +1,4 @@
-package Arrays_and_Strings;
+package arrays_and_strings;
 
 /* 
     Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.

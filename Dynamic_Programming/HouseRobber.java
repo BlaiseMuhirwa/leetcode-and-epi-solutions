@@ -1,4 +1,4 @@
-package Dynamic_Programming;
+package dynamic_programming;
 
 /*
 You are a professional robber planning to rob houses along a street. 

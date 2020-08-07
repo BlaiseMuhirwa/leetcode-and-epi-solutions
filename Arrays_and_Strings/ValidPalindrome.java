@@ -1,4 +1,4 @@
-package Arrays_and_Strings;
+package arrays_and_strings;
 import java.util.*;
 /* 
     Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.

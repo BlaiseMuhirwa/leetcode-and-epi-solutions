@@ -1,4 +1,4 @@
-package Trees_and_Graphs;
+package trees_and_graphs;
 import java.util.*;
 /*
     Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes),

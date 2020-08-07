@@ -1,4 +1,4 @@
-package Arrays_and_Strings;
+package arrays_and_strings;
 
 /* 
     Given a string s, find the longest palindromic substring in s. You may assume that

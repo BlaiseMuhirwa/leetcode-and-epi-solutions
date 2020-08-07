@@ -1,4 +1,4 @@
-package Trees_and_Graphs;
+package trees_and_graphs;
 
 /*
     Given a 2d grid map of '1's (land) and '0's (water), count the number of islands.

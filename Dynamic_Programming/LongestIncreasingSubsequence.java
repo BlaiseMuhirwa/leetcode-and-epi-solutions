@@ -1,4 +1,4 @@
-package Dynamic_Programming;
+package dynamic_programming;
 
 /*
 Given an unsorted array of integers, find the length of longest increasing subsequence.
