@@ -20,6 +20,8 @@ A solution set is:
 ]
 */
 public class CombinationsSums2 {
+    /* The run-time for this algorithm is O(2^n) since we are generating all combinations. 
+        the space complexity is O(n) since we grow the stack frame with every recursive call */
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> combinations = new ArrayList<List<Integer>>();
         Arrays.sort(candidates);
@@ -30,18 +32,19 @@ public class CombinationsSums2 {
     private void findCombinations(List<List<Integer>> combinations, int[] candidates,
                                   int target, int start, ArrayList<Integer> current) {
         if (target == 0) {
-            if (!combinations.contains(current)) {
-                combinations.add(new ArrayList<>(current));
-            }
+            combinations.add(new ArrayList<>(current));
             return;
         }
         else if (target < 0) return;
 
         for (int i = start; i < candidates.length; i++) {
-            current.add(candidates[i]);
-            findCombinations(combinations, candidates, target - candidates[i], i+1, current);
-            current.remove(current.size() - 1);
+            if (i == start || candidates[i] != candidates[i-1]) {
+                current.add(candidates[i]);
+                findCombinations(combinations, candidates, target - candidates[i], i+1, current);
+                current.remove(current.size() - 1);
+            }
         }
         
     }
+    
 }
