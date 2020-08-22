@@ -9,7 +9,6 @@ public class DropboxHackerRank {
         System.out.println(slidingWindowMin(firstTest, 3));
         System.out.println(slidingWindowMin(secondTest, 3));
     }
-
     public static int slidingWindowMin(int[] arr, int k) {
         if (arr == null || arr.length == 0) {
             return 0;
