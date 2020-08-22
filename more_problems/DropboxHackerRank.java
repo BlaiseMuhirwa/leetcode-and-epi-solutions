@@ -31,10 +31,6 @@ public class DropboxHackerRank {
                 output[i+1-k] = arr[deque.peekFirst()];
             }
         }
-        for (int i = 0; i < output.length; i++) {
-            System.out.print(output[i]);
-        }
-        System.out.println("\n");
         return findMin(output);
     }
 
