@@ -26,7 +26,7 @@ public class OppositeSumProblem {
 
     public static int reverseInt (int n) {
         int reverse = 0;
-        while (n) {
+        while (n != 0) {
             reverse *= 10;
             reverse += n % 10;
             n /= 10;
@@ -38,7 +38,7 @@ public class OppositeSumProblem {
         /* try out a few examples and see if it works */
         int[] testArray1 = {1, 20, 2, 11};
 
-        System.out.println(oppositeSum(testArray1)) //check to see if this gives the correct result
+        System.out.println(oppositeSum(testArray1)); //check to see if this gives the correct result
 
     }
 }
