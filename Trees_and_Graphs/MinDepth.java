@@ -43,3 +43,31 @@ public class MinDepth {
         return minLength+1;
     }
 }
+
+/* iterative solution 
+public class MinDepth {
+        int minLength = Integer.MAX_VALUE;
+    public int minDepth(TreeNode root) {
+        if (root == null) return 0;
+        LinkedList<Pair<TreeNode, Integer>> stack = new LinkedList<>();
+        
+        stack.add(new Pair(root, 1));
+        while (!stack.isEmpty()) {
+            Pair<TreeNode, Integer> current = stack.poll();
+            int value = current.getValue();
+            root = current.getKey();
+            if (root.left == null && root.right == null) {
+                minLength = Math.min(minLength, value);
+            }
+            if (root.left != null) {
+                stack.add(new Pair(root.left, value+1));
+            }
+            if (root.right != null) {
+                stack.add(new Pair(root.right, value+1));
+            }
+        }
+        return minLength;
+    }
+}
+
+*/
