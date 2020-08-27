@@ -3,10 +3,10 @@ import java.util.*;
 
 public class DropboxHackerRank {
     public static void main(String[] args) {
-        int[] firstTest = {1, 6, 3, 2, 1};
+        int[] firstTest = {1, 5, 3, 2};
         int[] secondTest = {1,3,-1,-3,5,3,6,7};
 
-        System.out.println(slidingWindowMin(firstTest, 3));
+        System.out.println(slidingWindowMin(firstTest, 2));
         System.out.println(slidingWindowMin(secondTest, 3));
     }
     
