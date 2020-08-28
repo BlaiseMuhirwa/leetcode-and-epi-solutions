@@ -2,14 +2,15 @@ package Linked_List;
 
 /**
  * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
  */
+class ListNode {
+      int val;
+      ListNode next;
+      ListNode() {}
+      ListNode(int val) { this.val = val; }
+      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+  }
+ 
 
  /*
 You are given two non-empty linked lists representing two non-negative integers. 
@@ -18,7 +19,7 @@ The digits are stored in reverse order and each of their nodes contain a single 
 
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
  */
-class Solution {
+public class addTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode copy = new ListNode (0, l1);
         ListNode reversedFirst = reverseList(l1);
