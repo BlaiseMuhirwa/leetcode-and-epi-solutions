@@ -32,10 +32,10 @@ public class PalindromePartitioning {
             return;
         }
         int len = s.length();
-        for (int i = startIndex; i < len; i++) {
-            if (isPalindrome(s, startIndex, i)) {
-                current.add(s.substring(startIndex, i + 1)); // choose
-                helper(output, current, s, i + 1); // explore
+        for (int endIndex = startIndex; endIndex < len; endIndex++) {
+            if (isPalindrome(s, startIndex, endIndex)) {
+                current.add(s.substring(startIndex, endIndex + 1)); // choose
+                helper(output, current, s, endIndex + 1); // explore
                 current.remove(current.size() - 1); // un-choose
             }
         }
