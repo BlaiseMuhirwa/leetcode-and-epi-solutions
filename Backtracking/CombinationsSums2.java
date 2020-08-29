@@ -1,4 +1,4 @@
-package backtracking;
+package Backtracking;
 import java.util.*;
 /*
 Given a collection of candidate numbers (candidates) and a target number (target),
