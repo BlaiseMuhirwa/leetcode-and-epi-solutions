@@ -11,18 +11,28 @@ Given an integer array nums, find the sum of the elements between indices i and 
  * int param_1 = obj.sumRange(i,j);
  */
 public class RangeSumQuery {
-    /* this is a very slow brute-force approach that takes O(n) time */
+    /* array for caching sums from the input array provided 
+        in the constructor */
     private int[] numArray;
+    private int len; 
     public RangeSumQuery(int[] nums) {
-        this.numArray = new int[nums.length];
-        numArray = nums;
+        this.len = nums.length;
+        if (len == 0) {
+            return;
+        }
+        else {
+            this.numArray = new int[len+1];
+            numArray[0] = 0;
+            numArray[1] = nums[0];
+            int sum = nums[0];
+            for (int i = 1; i < nums.length; i++) {
+                sum += nums[i];
+                numArray[i+1] = sum;
+            }
+        }
     }
     
     public int sumRange(int i, int j) {
-        int sum = 0;
-        for (int start = i; start <= j; start++) {
-            sum += this.numArray[start];
-        }
-        return sum;
+        return this.numArray[j+1] - this.numArray[i];
     }
 }
