@@ -36,4 +36,19 @@ public class WordBreak {
         map.put(s, false);
         return false;
     }
+
+    /* bottom-up dynamic programming approach */
+    public boolean wordBreakBottomUp(String s, List<String> wordDict) {
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+        for (int len = 1; len <= s.length(); len++) {
+            for (int i = 0; i < len; i++) {
+                if (dp[i] && wordDict.contains(s.substring(i, len))) {
+                    dp[len] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
 }
