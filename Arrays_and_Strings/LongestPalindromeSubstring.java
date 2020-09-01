@@ -22,13 +22,13 @@ public class LongestPalindromeSubstring {
             return s;
         }
         for (int i = 0; i < len-1; i++) {
-            expandRange(s, i, i);
-            expandRange(s, i, i+1);
+            expandPalindromicRange(s, i, i);
+            expandPalindromicRange(s, i, i+1);
         }
         return s.substring(startingPoint, startingPoint+resLength);
     }
     
-    private void expandRange(String s, int start, int end) {
+    private void expandPalindromicRange(String s, int start, int end) {
         while (start >= 0 && end < s.length() &&
                s.charAt(start) == s.charAt(end)) {
             start--;
