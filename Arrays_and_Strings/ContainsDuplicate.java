@@ -1,9 +1,9 @@
-package arrays_and_strings;
+package Arrays_and_Strings;
 
 import java.util.*;
 public class ContainsDuplicate {
     /* Runtime: O(n); space complexity: O(n) */
-    public boolean containsDuplicate(int[] nums) {
+    public static boolean containsDuplicate(int[] nums) {
         if(nums == null || nums.length == 1) {
             return false;
         }
@@ -14,6 +14,10 @@ public class ContainsDuplicate {
             }
         }
         return false;
+    }
+    public static void main(String[] args) {
+        int[] input = {1, 2, 3, 4, 5};
+        System.out.println(containsDuplicate(input));
     }
 
 }
