@@ -2,9 +2,10 @@ package more_problems;
 
 public class DuolingoAssessment {
     public static void main(String[] args) {
-        System.out.println(getSubsequenceCount("ABC", "ABCBAC"));
+        System.out.println(getSubsequenceCount("ABC", "ABCBABCBAC"));
         System.out.println(getSubsequenceCount("aka", "jj"));
         System.out.println(getSubsequenceCount("aka", "adbkdkalakabbciekdlkdkkda"));
+        System.out.println(getSubsequenceCount("HRW", "HERHRWS"));
     }
 
     public static int getSubsequenceCount(String s, String t) {
@@ -29,3 +30,5 @@ public class DuolingoAssessment {
         return dp[0][0];
     }
 }
+
+
