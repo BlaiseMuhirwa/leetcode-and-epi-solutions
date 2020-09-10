@@ -9,19 +9,25 @@ public class MergeAccounts {
         List<List<String>> output = new ArrayList<List<String>>();
         if (accounts == null || accounts.size() == 0) return output;
 
-        for (List<String> account: accounts) {
-            String name = "";
-            for (String email: account) {
-                if (name == "") {
-                    name = email;
-                    continue;
-                }
-                graph.computeIfAbsent(
-                        email, x-> new ArrayList<String>()).add(account.get(1));
-                graph.computeIfAbsent(
-                        account.get(1), x-> new ArrayList<String>()).add(email);
-                emailToName.put(email, name);
+        for (List<String> account : accounts) {
+            Iterator<String> iterator = account.listIterator();
+            String name = iterator.next();
+            String key = "";
+            if (iterator.hasNext()) key = iterator.next();
+
+            emailToName.put(key, name);
+            List<String> values = graph.getOrDefault(
+                    key, new ArrayList<>());
+            while (iterator.hasNext()) {
+                String email = iterator.next();
+                values.add(email);
+                emailToName.put(email,name);
+                List<String> list = graph.getOrDefault(
+                        email, new ArrayList<>());
+                list.add(key);
+                graph.put(email, list);
             }
+            graph.put(key, values);
         }
 
         Set<String> visitedEmails = new HashSet<>();
