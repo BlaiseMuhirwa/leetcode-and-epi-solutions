@@ -10,7 +10,7 @@ package implementations;
 public class UnionFindDataStructure {
     public static void main(String[] args) {
         /* we have ten individuals: 0, 1, 2, 3, 4, 5, 6, 7, 8, ,9 */
-        int n = 5;
+        int n = 10;
         UnionFind sets = new UnionFind(n);
         sets.union(0, 1);
         sets.union(1, 3);
@@ -25,7 +25,7 @@ public class UnionFindDataStructure {
         } else System.out.println("Person 0 and Person 3 are not connected");
         /* check if person 9 and person 2 are connected */
         if (sets.find(9) == sets.find(2)) {
-            System.out.println("Person 9 and Person 2 are connected")
+            System.out.println("Person 9 and Person 2 are connected");
         } else System.out.println("Person 9 and Person 2 are not connected");
 
     }
@@ -71,7 +71,8 @@ class UnionFind {
 
     }
     public int find(int x) {
-        if (x != parent[x]) {
+        if (x == parent[x]) return x;
+        else {
             parent[x] = find(parent[x]);
         }
         return parent[x];
