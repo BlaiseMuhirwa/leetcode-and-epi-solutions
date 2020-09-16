@@ -45,4 +45,33 @@ public class Permutations {
         nums[i] = nums[j];
         nums[j] = temp;
     }
+
+    /**
+     * Another implementation, which is much slower
+     */
+
+    public List<List<Integer>> findPermutations(int[] nums) {
+        List<List<Integer>> output = new ArrayList<>();
+        if (nums == null || nums.length == 0) return output;
+
+        boolean[] visited = new boolean[nums.length];
+        backtrack(nums, visited, new ArrayList<>(), output);
+        return output;
+    }
+
+    public void backtrack(int[] nums, boolean[] visited,
+                          ArrayList<Integer> current, List<List<Integer>> output) {
+        if (nums.length == current.size()) {
+            output.add(new ArrayList(current));
+            return;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (visited[i]) continue;
+            current.add(nums[i]);
+            visited[i] = true;
+            backtrack(nums, visited, current, output);
+            current.remove(current.size() - 1);
+            visited[i] = false;
+        }
+    }
 }
