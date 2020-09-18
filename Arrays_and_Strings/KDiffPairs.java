@@ -37,4 +37,28 @@ public class KDiffPairs {
         }
         return counter;
     }
+
+    /**
+     * The following implementation for this problem takes O(n) time and O(n) space
+     * because we use a frequency hashmap
+     * @param nums
+     * @param k
+     * @return
+     */
+    public int findPairsSecondImplementation(int[] nums, int k) {
+        if (nums == null || nums.length == 0) return 0;
+
+        int counter = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        for (int key : map.keySet()) {
+            if (k == 0 && map.get(key) > 1) counter++;
+            if (map.containsKey(key + k)) {
+                if (k > 0) counter++;
+            }
+        }
+        return counter;
+    }
 }
