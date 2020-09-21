@@ -14,6 +14,13 @@ import java.util.*;
  *     Note that "i" comes before "love" due to a lower alphabetical order.
  */
 public class TopKFrequentWords {
+    /**
+     * Time complexity: O(N * logK) -> we iterate over words to create a frequency table in O(N)
+     * Then, we add N words to the heap, each in O(logK)
+     * @param words
+     * @param k
+     * @return
+     */
     public List<String> topKFrequent(String[] words, int k) {
         List<String> output = new ArrayList<>();
         if (words == null || words.length == 0) return output;
