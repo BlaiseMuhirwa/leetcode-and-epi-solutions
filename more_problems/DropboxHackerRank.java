@@ -31,10 +31,10 @@ public class DropboxHackerRank {
                 output[i+1-k] = arr[deque.peekFirst()];
             }
         }
-        return findMin(output);
+        return findMax(output);
     }
 
-    public static int findMin(int[] arr) {
+    public static int findMax(int[] arr) {
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
             max = Math.max(max, arr[i]);
