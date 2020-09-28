@@ -1,5 +1,6 @@
 package more_problems;
 
+
 public class FacebookProblem {
     public static int exchangeDigits(int num) {
         if (num % 10 == num) return num;
@@ -24,5 +25,6 @@ public class FacebookProblem {
         System.out.println(exchangeDigits(10));
         System.out.println(exchangeDigits(1));
         System.out.println(exchangeDigits(1234567891));
+
     }
 }
