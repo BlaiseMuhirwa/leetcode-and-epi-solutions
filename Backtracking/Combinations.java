@@ -18,6 +18,11 @@ import java.util.ArrayList;
  * ]
  */
 public class Combinations {
+    /**
+     * Time complexity: O(k * (n choose k)) wher (n choose k) or nCk is the
+     * total number of combinations.
+     * space complexity: O(nCk)
+     */
     int numbers;
     int n;
     List<List<Integer>> output = new ArrayList<>();
