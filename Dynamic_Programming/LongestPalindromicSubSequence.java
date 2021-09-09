@@ -10,7 +10,7 @@ package Dynamic_Programming;
 public class LongestPalindromicSubSequence {
     /**
      * In this solution we use the following recurrence relation:
-     * LPS(i, j) = * 2 + LPS(i-1, j-1) if s.charAt(i) == s.charAt(j)
+     * LPS(i, j) = * 2 + LPS(i+1, j-1) if s.charAt(i) == s.charAt(j)
      *             * Math.max(LPS(i+1, j), LPS(i, j-1)) otherwise
      * @param s
      * @return
