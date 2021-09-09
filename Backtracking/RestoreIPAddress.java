@@ -28,21 +28,19 @@ public class RestoreIPAddress {
     private void getAddresses(List<String> output, String s,
                              int[] path, int builderIndex, int segment) {
         if (segment == 4 && builderIndex == s.length()) {
-            output.add(path[0] + "." + path[1] + "." 
-                       + path[2] + "." + path[3]);
-        }
-        else if (segment == 4 || builderIndex == s.length()) {
+            output.add(path[0] + "." + path[1] + "."
+                    + path[2] + "." + path[3]);
+        } else if (segment == 4 || builderIndex == s.length()) {
             return;
-        }
-        else {
-            for (int len = 1; len <= 3 && len+builderIndex <= s.length(); len++) {
+        } else {
+            for (int len = 1; len <= 3 && len + builderIndex <= s.length(); len++) {
                 String num = s.substring(builderIndex, builderIndex + len);
-                if (Integer.parseInt(num) > 255 || 
-                    len >= 2 && s.charAt(builderIndex) == '0') {
+                if (Integer.parseInt(num) > 255 ||
+                        len >= 2 && s.charAt(builderIndex) == '0') {
                     break;
                 }
                 path[segment] = Integer.parseInt(num);
-                getAddresses(output, s, path, builderIndex+len, segment+1);
+                getAddresses(output, s, path, builderIndex + len, segment + 1);
                 path[segment] = -1;
             }
         }
